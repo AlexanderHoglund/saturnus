@@ -96,8 +96,12 @@ export default function Info() {
         aria-label="Information"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        style={{ fontFamily: HELVETICA }}
-        className="fixed left-6 top-6 z-30 flex h-9 w-9 items-center justify-center rounded-full border border-white/50 text-base italic text-white/70 transition-colors hover:border-white hover:text-white"
+        style={{ fontFamily: HELVETICA, ...(open ? { color: RED, borderColor: RED } : {}) }}
+        className={`fixed left-6 top-6 z-30 flex h-9 w-9 items-center justify-center rounded-full border text-base italic transition-colors ${
+          open
+            ? ""
+            : "border-white/50 text-white/70 hover:border-white hover:text-white"
+        }`}
       >
         i
       </button>
