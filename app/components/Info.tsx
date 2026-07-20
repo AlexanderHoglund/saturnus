@@ -152,7 +152,6 @@ export default function Info() {
           </p>
           <p className="mb-6">Hör av er. Vi svarar så gott vi kan.</p>
           <p>info@saturnuskultur.se</p>
-          <p>Instagram: saturnuskultur</p>
         </article>
       </div>
     </>
