@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import StarSky from "../components/StarSky";
+
+export const metadata: Metadata = {
+  title: "Byggnaden",
+  description:
+    "Saturnushuset i hörnet Lantmannagatan–Ystadsgatan i Malmö — det gamla funkishuset som PLX Kulturförening väcker till liv som kulturhus.",
+  alternates: { canonical: "/thebuilding" },
+};
 
 export default function TheBuilding() {
   return (

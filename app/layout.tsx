@@ -14,28 +14,64 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://saturnuskultur.se";
 const TITLE = "Saturnushuset";
+const TITLE_FULL = "Saturnushuset — kulturhus i Malmö";
 const DESCRIPTION =
-  "Saturnushuset i Malmö får nytt liv som kulturhus — en plats som rymmer ett kalejdoskop av uttryck och upplevelser, öppet för alla.";
+  "Saturnushuset i Malmö får nytt liv som kulturhus. I hörnet Lantmannagatan–Ystadsgatan väcker PLX Kulturförening huset till liv igen — en plats för konst, musik, mat, design, scenkonst, dans och kultur i alla former, öppen för alla.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: TITLE,
+    default: TITLE_FULL,
     template: `%s | ${TITLE}`,
   },
   description: DESCRIPTION,
   applicationName: TITLE,
+  keywords: [
+    "Saturnushuset",
+    "Saturnus",
+    "kulturhus",
+    "kulturhus Malmö",
+    "Malmö",
+    "PLX",
+    "PLX Kulturförening",
+    "Kulturföreningen PLX",
+    "kultur",
+    "konst",
+    "musik",
+    "scenkonst",
+    "dans",
+    "design",
+    "Lantmannagatan",
+    "Ystadsgatan",
+  ],
+  authors: [{ name: "PLX Kulturförening" }],
+  creator: "PLX Kulturförening",
+  publisher: "PLX Kulturförening",
+  category: "culture",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "sv_SE",
     url: "/",
     siteName: TITLE,
-    title: TITLE,
+    title: TITLE_FULL,
     description: DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
+    title: TITLE_FULL,
     description: DESCRIPTION,
   },
 };
@@ -45,9 +81,46 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#saturnushuset`,
+    name: "Saturnushuset",
+    alternateName: "Saturnushuset kulturhus",
+    url: SITE_URL,
+    description: DESCRIPTION,
+    email: "info@saturnuskultur.se",
+    foundingLocation: "Malmö",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Lantmannagatan / Ystadsgatan",
+      addressLocality: "Malmö",
+      addressCountry: "SE",
+    },
+    parentOrganization: {
+      "@type": "Organization",
+      name: "PLX Kulturförening",
+      alternateName: ["Kulturföreningen PLX", "PLX"],
+      areaServed: ["Malmö", "Stockholm", "Blekinge"],
+    },
+    knowsAbout: [
+      "konst",
+      "musik",
+      "mat",
+      "design",
+      "scenkonst",
+      "dans",
+      "kultur",
+    ],
+  };
+
   return (
     <html lang="sv">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
