@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://saturnuskultur.se";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.saturnuskulturhus.info";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

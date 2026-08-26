@@ -12,7 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://saturnuskultur.se";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.saturnuskulturhus.info";
 const TITLE = "Saturnushuset";
 const TITLE_FULL = "Saturnushuset — kulturhus i Malmö";
 const DESCRIPTION =
