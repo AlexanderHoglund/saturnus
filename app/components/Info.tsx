@@ -122,7 +122,7 @@ export default function Info() {
           }`}
         >
           <h1 className="mb-6 text-xl font-normal">
-            Saturnushuset i Malmö får nytt liv som kulturhus
+            Saturnushuset i Malmö får nytt liv som en plats för kultur
           </h1>
           <p className="mb-4">
             I hörnet Lantmannagatan–Ystadsgatan ligger Saturnushuset, ett hus som
@@ -133,9 +133,9 @@ export default function Info() {
           <p className="mb-4">Nu väcker vi huset till liv igen.</p>
           <p className="mb-4">
             Den 2 juli 2026 tecknade MKB Fastighets AB avtal om att överlåta
-            fastigheten. Huset ska nu förvaltas för att ge Malmö ett nytt
-            kulturhus, en plats som rymmer ett kalejdoskop av uttryck och
-            upplevelser, öppet för alla.
+            fastigheten. Huset ska nu förvaltas för att ge Malmö en ny plats
+            för kultur, som rymmer ett kalejdoskop av uttryck och upplevelser,
+            öppen för alla.
           </p>
           <p className="mb-4">
             Vi som kommer att förvalta Saturnushuset, tillsammans med Malmös

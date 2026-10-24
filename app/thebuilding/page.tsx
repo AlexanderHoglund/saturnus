@@ -5,7 +5,7 @@ import StarSky from "../components/StarSky";
 export const metadata: Metadata = {
   title: "Byggnaden",
   description:
-    "Saturnushuset i hörnet Lantmannagatan–Ystadsgatan i Malmö — det gamla funkishuset som PLX Kulturförening väcker till liv som kulturhus.",
+    "Saturnushuset i hörnet Lantmannagatan–Ystadsgatan i Malmö — det gamla funkishuset som PLX Kulturförening väcker till liv som en plats för kultur.",
   alternates: { canonical: "/thebuilding" },
 };
 

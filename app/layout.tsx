@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.saturnuskulturhus.info";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://saturnushuset.se";
 const TITLE = "Saturnushuset";
-const TITLE_FULL = "Saturnushuset — kulturhus i Malmö";
+const TITLE_FULL = "Saturnushuset — en plats för kultur i Malmö";
 const DESCRIPTION =
-  "Saturnushuset i Malmö får nytt liv som kulturhus. I hörnet Lantmannagatan–Ystadsgatan väcker PLX Kulturförening huset till liv igen — en plats för konst, musik, mat, design, scenkonst, dans och kultur i alla former, öppen för alla.";
+  "Saturnushuset i Malmö får nytt liv som en plats för kultur. I hörnet Lantmannagatan–Ystadsgatan väcker PLX Kulturförening huset till liv igen — med konst, musik, mat, design, scenkonst, dans och kultur i alla former, öppet för alla.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   keywords: [
     "Saturnushuset",
     "Saturnus",
-    "kulturhus",
-    "kulturhus Malmö",
+    "en plats för kultur",
+    "kultur Malmö",
     "Malmö",
     "PLX",
     "PLX Kulturförening",
@@ -88,7 +88,7 @@ export default function RootLayout({
     "@type": "Organization",
     "@id": `${SITE_URL}/#saturnushuset`,
     name: "Saturnushuset",
-    alternateName: "Saturnushuset kulturhus",
+    alternateName: "Saturnushuset – en plats för kultur",
     url: SITE_URL,
     description: DESCRIPTION,
     email: "info@saturnuskultur.se",
