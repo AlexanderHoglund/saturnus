@@ -68,6 +68,14 @@ export default function Info() {
 
   return (
     <>
+      {/* backdrop — dims the page (and the poster) beneath the lines and box */}
+      <div
+        aria-hidden
+        className={`pointer-events-none fixed inset-0 z-20 bg-black/80 transition-opacity duration-300 ${
+          open ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
       {/* connector lines + corner nodes, tethering the box to the (i) */}
       <svg
         aria-hidden
@@ -117,7 +125,7 @@ export default function Info() {
           ref={boxRef}
           onClick={(e) => e.stopPropagation()}
           style={{ fontFamily: HELVETICA, color: RED, transformOrigin: geo.origin }}
-          className={`my-16 max-w-2xl rounded-2xl border border-white/15 bg-black/30 px-8 py-10 text-base font-normal leading-relaxed shadow-2xl backdrop-blur-[2px] transition-[transform,opacity] duration-300 ease-out ${
+          className={`my-16 max-w-2xl rounded-2xl border border-white/15 bg-black px-8 py-10 text-base font-normal leading-relaxed shadow-2xl transition-[transform,opacity] duration-300 ease-out ${
             open ? "scale-100 opacity-100" : "scale-0 opacity-0"
           }`}
         >
